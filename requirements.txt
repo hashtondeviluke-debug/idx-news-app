@@ -1,0 +1,11 @@
+# IDX News Intelligence System — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Step 1: Scraper ───────────────────────────────────────────────────────────
+requests>=2.31.0        # HTTP client with retry/timeout support
+beautifulsoup4>=4.12.3  # HTML parser and tree navigation
+lxml>=5.2.1             # Fast C-based HTML/XML parser (bs4 backend)
+
+# ── Step 2: AI Processor ─────────────────────────────────────────────────────
+google-generativeai>=0.8.0   # Official Gemini SDK (includes google-api-core)
+python-dotenv>=1.0.1         # Load GEMINI_API_KEY from .env file

@@ -1,0 +1,70 @@
+{
+  "keywords": ["saham", "emiten", "bursa", "ihsg", "idx", "bei", "ipo", "dividen", "obligasi", "efek"],
+  "sources": [
+    {
+      "name": "Emiten News",
+      "base_url": "https://emitennews.com",
+      "listing_url": "https://emitennews.com/news",
+      "enabled": true,
+      "request_delay_seconds": 2,
+      "article_list_selector": "article.post, div.post-item, div.td-block-span6",
+      "title_selector": "h3, h2, .entry-title, .td-module-title",
+      "link_selector": "a",
+      "link_prefix": "",
+      "body_selectors": ["div.entry-content", "div.td-post-content"],
+      "notes": "General IDX/stock market news portal"
+    },
+    {
+      "name": "Kontan",
+      "base_url": "https://www.kontan.co.id",
+      "listing_url": "https://www.kontan.co.id/tag/saham",
+      "enabled": true,
+      "request_delay_seconds": 3,
+      "article_list_selector": "li.list-berita, div.list-berita",
+      "title_selector": "h1, h2, h3, .judul",
+      "link_selector": "a",
+      "link_prefix": "",
+      "body_selectors": ["div#content-1", "div.detail-berita"],
+      "notes": "Indonesian financial newspaper"
+    },
+    {
+      "name": "CNBC Indonesia",
+      "base_url": "https://www.cnbcindonesia.com",
+      "listing_url": "https://www.cnbcindonesia.com/market",
+      "enabled": true,
+      "request_delay_seconds": 2,
+      "article_list_selector": "article, div.articles",
+      "title_selector": "h2, h3, .title",
+      "link_selector": "a",
+      "link_prefix": "",
+      "body_selectors": ["div.detail-text", "div.article-body"],
+      "notes": "CNBC Indonesia market section"
+    },
+    {
+      "name": "Bisnis.com",
+      "base_url": "https://market.bisnis.com",
+      "listing_url": "https://market.bisnis.com/bursa-harian",
+      "enabled": true,
+      "request_delay_seconds": 3,
+      "article_list_selector": "div.col-sm-6.col-md-4, article.article-list-item",
+      "title_selector": "h3, h4, .entry-title",
+      "link_selector": "a",
+      "link_prefix": "",
+      "body_selectors": ["div.col-sm-10.padding-article", "div.article-content"],
+      "notes": "Bisnis.com market & stock exchange section"
+    },
+    {
+      "name": "IDX Channel",
+      "base_url": "https://www.idxchannel.com",
+      "listing_url": "https://www.idxchannel.com/market-news",
+      "enabled": true,
+      "request_delay_seconds": 2,
+      "article_list_selector": "article, div.card-news",
+      "title_selector": "h2, h3, .title",
+      "link_selector": "a",
+      "link_prefix": "",
+      "body_selectors": ["div.detail-news-content", "div.article-body"],
+      "notes": "Official IDX-affiliated news channel"
+    }
+  ]
+}

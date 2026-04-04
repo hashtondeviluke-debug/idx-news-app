@@ -1,0 +1,78 @@
+2026-04-04 21:47:03 [INFO] ============================================================
+2026-04-04 21:47:03 [INFO] IDX News Scraper — starting run
+2026-04-04 21:47:03 [INFO]   Mode   : LIVE
+2026-04-04 21:47:03 [INFO]   Time   : 2026-04-04 21:47:03
+2026-04-04 21:47:03 [INFO] ============================================================
+2026-04-04 21:47:03 [INFO] Deduplication DB: 0 articles already processed
+2026-04-04 21:47:03 [INFO] Active sources: ['Emiten News', 'Kontan', 'CNBC Indonesia', 'Bisnis.com', 'IDX Channel']
+2026-04-04 21:47:03 [INFO] Filter keywords: ['saham', 'emiten', 'bursa', 'ihsg', 'idx', 'bei', 'ipo', 'dividen', 'obligasi', 'efek']
+2026-04-04 21:47:03 [INFO] [Emiten News] Fetching listing page: https://emitennews.com/news
+2026-04-04 21:47:04 [INFO] [Emiten News] Found 0 candidate article(s) on listing page
+2026-04-04 21:47:04 [INFO] [Emiten News] Done. 0 new relevant article(s) collected.
+2026-04-04 21:47:05 [INFO] [Kontan] Fetching listing page: https://www.kontan.co.id/tag/saham
+2026-04-04 21:47:05 [INFO] [Kontan] Found 1 candidate article(s) on listing page
+2026-04-04 21:47:05 [INFO] [Kontan] (1/1) Fetching article: Harga Batubara Menguat, Simak Rekomendasi Saham Petrindo Jay
+2026-04-04 21:47:09 [INFO] [Kontan] Done. 0 new relevant article(s) collected.
+2026-04-04 21:47:10 [INFO] [CNBC Indonesia] Fetching listing page: https://www.cnbcindonesia.com/market
+2026-04-04 21:47:10 [INFO] [CNBC Indonesia] Found 30 candidate article(s) on listing page
+2026-04-04 21:47:10 [INFO] [CNBC Indonesia] (1/30) Fetching article: Guru SD Kaya Mendadak, Ketemu Harta Karun Miliaran di Halama
+2026-04-04 21:47:13 [INFO] [CNBC Indonesia] ✓ SAVED: Guru SD Kaya Mendadak, Ketemu Harta Karun Miliaran di Halaman Sekolah
+2026-04-04 21:47:13 [INFO] [CNBC Indonesia] (2/30) Fetching article: Heboh Gunung Emas 53 Juta Ton di RI, Presiden Satu Dunia Ken
+2026-04-04 21:47:15 [INFO] [CNBC Indonesia] ✓ SAVED: Heboh Gunung Emas 53 Juta Ton di RI, Presiden Satu Dunia Kena Prank
+2026-04-04 21:47:15 [INFO] [CNBC Indonesia] (3/30) Fetching article: Video: Syarat Agar Investor Asing "Ngegas" Masuk Bursa Saham
+2026-04-04 21:47:17 [INFO] [CNBC Indonesia] ✓ SAVED: Video: Syarat Agar Investor Asing "Ngegas" Masuk Bursa Saham & SBN
+2026-04-04 21:47:17 [INFO] [CNBC Indonesia] (4/30) Fetching article: Aturan Terbaru Pinjol, Cek Syarat Debt Collector Boleh Tagih
+2026-04-04 21:47:20 [INFO] [CNBC Indonesia] (5/30) Fetching article: Anak Pejabat RI Hidup Melarat, Tak Sudi Menjual Nama Orang T
+2026-04-04 21:47:22 [INFO] [CNBC Indonesia] ✓ SAVED: Anak Pejabat RI Hidup Melarat, Tak Sudi Menjual Nama Orang Tua
+2026-04-04 21:47:22 [INFO] [CNBC Indonesia] (6/30) Fetching article: Video: Genjot Penjualan,Mobil Listrik China Tawarkan Teknolo
+2026-04-04 21:47:25 [INFO] [CNBC Indonesia] (7/30) Fetching article: Utang Pinjol Otomatis Hangus Setelah 90 Hari? Ini Aturannya
+2026-04-04 21:47:27 [INFO] [CNBC Indonesia] (8/30) Fetching article: Video: Investasi Pilihan Pengelola Dana Jumbo Saat Perang Ir
+2026-04-04 21:47:29 [INFO] [CNBC Indonesia] ✓ SAVED: Video: Investasi Pilihan Pengelola Dana Jumbo Saat Perang Iran Meluas
+2026-04-04 21:47:29 [INFO] [CNBC Indonesia] (9/30) Fetching article: Punya Harta Banyak Tak Bikin Tenang, Taipan Ini Putuskan Jad
+2026-04-04 21:47:32 [INFO] [CNBC Indonesia] (10/30) Fetching article: Pecahan Rupiah Ini Bakal Tak Laku Lagi, Cek Batas Waktu Penu
+2026-04-04 21:47:34 [INFO] [CNBC Indonesia] (11/30) Fetching article: Konglomerat RI Jual Lahan Strategis di Singapura, Harga Rp1,
+2026-04-04 21:47:36 [INFO] [CNBC Indonesia] (12/30) Fetching article: WIKA Kembali Turunkan Utang Rp3,87 triliun Sepanjang 2025
+2026-04-04 21:47:39 [INFO] [CNBC Indonesia] ✓ SAVED: WIKA Kembali Turunkan Utang Rp3,87 triliun Sepanjang 2025
+2026-04-04 21:47:39 [INFO] [CNBC Indonesia] (13/30) Fetching article: Jepang Ketiban Duren Runtuh, Microsoft Investasi AI Rp177,2 
+2026-04-04 21:47:41 [INFO] [CNBC Indonesia] ✓ SAVED: Jepang Ketiban Duren Runtuh, Microsoft Investasi AI Rp177,2 T
+2026-04-04 21:47:41 [INFO] [CNBC Indonesia] (14/30) Fetching article: Segini Gaji Debt Collector RI Tiap Tarik Mobil Nunggak Kredi
+2026-04-04 21:47:44 [INFO] [CNBC Indonesia] (15/30) Fetching article: Heboh Emas 30.000 Ton Ditemukan di Banten, Dirampok Asing
+2026-04-04 21:47:46 [INFO] [CNBC Indonesia] (16/30) Fetching article: Bank di Jakarta Tutup, OJK Cabut Izin Usaha Gara-gara Ini
+2026-04-04 21:47:48 [INFO] [CNBC Indonesia] ✓ SAVED: Bank di Jakarta Tutup, OJK Cabut Izin Usaha Gara-gara Ini
+2026-04-04 21:47:48 [INFO] [CNBC Indonesia] (17/30) Fetching article: Harap Waspada! Usaha Mikro di RI Cs Lemah Literasi Keuangan
+2026-04-04 21:47:51 [INFO] [CNBC Indonesia] (18/30) Fetching article: Optimis Pasar Modal Tumbuh, Pengamat Sambut Positif Langkah 
+2026-04-04 21:47:53 [INFO] [CNBC Indonesia] ✓ SAVED: Optimis Pasar Modal Tumbuh, Pengamat Sambut Positif Langkah OJK
+2026-04-04 21:47:53 [INFO] [CNBC Indonesia] (19/30) Fetching article: OJK, BEI & KSEI Tuntaskan Empat Agenda Reformasi Pasar Modal
+2026-04-04 21:47:56 [INFO] [CNBC Indonesia] ✓ SAVED: OJK, BEI & KSEI Tuntaskan Empat Agenda Reformasi Pasar Modal
+2026-04-04 21:47:56 [INFO] [CNBC Indonesia] (20/30) Fetching article: Simak! Begini Strategi PTPP Perkuat Fundamental Keuangan
+2026-04-04 21:47:58 [INFO] [CNBC Indonesia] ✓ SAVED: Simak! Begini Strategi PTPP Perkuat Fundamental Keuangan
+2026-04-04 21:47:58 [INFO] [CNBC Indonesia] (21/30) Fetching article: Pasar Saham Asia Hijau, Masih Ada Harapan Selat Hormuz Dibuk
+2026-04-04 21:48:01 [INFO] [CNBC Indonesia] ✓ SAVED: Pasar Saham Asia Hijau, Masih Ada Harapan Selat Hormuz Dibuka
+2026-04-04 21:48:01 [INFO] [CNBC Indonesia] (22/30) Fetching article: Diperiksa Kasus DSI, Dude Harlino-Alyssa Soebandono Janji Ba
+2026-04-04 21:48:03 [INFO] [CNBC Indonesia] (23/30) Fetching article: Perusahaan Ini Sudah Ada Sejak Zaman Nabi Muhammad, Bukan di
+2026-04-04 21:48:05 [INFO] [CNBC Indonesia] ✓ SAVED: Perusahaan Ini Sudah Ada Sejak Zaman Nabi Muhammad, Bukan di Arab
+2026-04-04 21:48:05 [INFO] [CNBC Indonesia] (24/30) Fetching article: Indeks RI Gak Bakal Turun ke Frontier Market, Bos OJK Ungkap
+2026-04-04 21:48:08 [INFO] [CNBC Indonesia] ✓ SAVED: Indeks RI Gak Bakal Turun ke Frontier Market, Bos OJK Ungkap Alasannya
+2026-04-04 21:48:08 [INFO] [CNBC Indonesia] (25/30) Fetching article: OJK Buka-bukaan 39 'Sosok' Investor Pasar Modal RI, Ini Daft
+2026-04-04 21:48:10 [INFO] [CNBC Indonesia] ✓ SAVED: OJK Buka-bukaan 39 'Sosok' Investor Pasar Modal RI, Ini Daftarnya
+2026-04-04 21:48:10 [INFO] [CNBC Indonesia] (26/30) Fetching article: Ini Tujuan OJK Buka-bukaan Daftar Saham yang Pemiliknya 'Itu
+2026-04-04 21:48:13 [INFO] [CNBC Indonesia] ✓ SAVED: Ini Tujuan OJK Buka-bukaan Daftar Saham yang Pemiliknya 'Itu-Itu Aja'
+2026-04-04 21:48:13 [INFO] [CNBC Indonesia] (27/30) Fetching article: Lengkap, Ini Tahapan Aturan Baru Free Float 15%
+2026-04-04 21:48:15 [INFO] [CNBC Indonesia] ✓ SAVED: Lengkap, Ini Tahapan Aturan Baru Free Float 15%
+2026-04-04 21:48:15 [INFO] [CNBC Indonesia] (28/30) Fetching article: Beredar 4 Paket Direksi Bursa Efek Indonesia, OJK Buka Suara
+2026-04-04 21:48:17 [INFO] [CNBC Indonesia] ✓ SAVED: Beredar 4 Paket Direksi Bursa Efek Indonesia, OJK Buka Suara
+2026-04-04 21:48:17 [INFO] [CNBC Indonesia] (29/30) Fetching article: Gembok Laba Sekuritas Indonesia Dibuka, BEI Ungkap Alasannya
+2026-04-04 21:48:20 [INFO] [CNBC Indonesia] ✓ SAVED: Gembok Laba Sekuritas Indonesia Dibuka, BEI Ungkap Alasannya
+2026-04-04 21:48:20 [INFO] [CNBC Indonesia] (30/30) Fetching article: Video: Siasat Pengusaha Cegah "Malapetaka" Bisnis Mall Usai 
+2026-04-04 21:48:22 [INFO] [CNBC Indonesia] Done. 19 new relevant article(s) collected.
+2026-04-04 21:48:23 [INFO] [Bisnis.com] Fetching listing page: https://market.bisnis.com/bursa-harian
+2026-04-04 21:48:24 [WARNING]   HTTP 404 for: https://market.bisnis.com/bursa-harian
+2026-04-04 21:48:24 [ERROR] [Bisnis.com] Could not fetch listing page. Skipping.
+2026-04-04 21:48:25 [INFO] [IDX Channel] Fetching listing page: https://www.idxchannel.com/market-news
+2026-04-04 21:48:25 [INFO] [IDX Channel] Found 0 candidate article(s) on listing page
+2026-04-04 21:48:25 [INFO] [IDX Channel] Done. 0 new relevant article(s) collected.
+2026-04-04 21:48:26 [INFO] ============================================================
+2026-04-04 21:48:26 [INFO] Total new articles collected: 19
+2026-04-04 21:48:26 [INFO] raw_news.json updated: 19 new + 0 existing = 19 total articles
+2026-04-04 21:48:26 [INFO] Run complete.
+2026-04-04 21:48:26 [INFO] ============================================================
