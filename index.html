@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDX News Radar AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: white; font-family: sans-serif; }
+        .card { background: #1e293b; border-radius: 8px; padding: 15px; margin-bottom: 10px; border: 1px solid #334155; }
+        .score-5 { border-left: 5px solid #22c55e; }
+        .score-1 { border-left: 5px solid #ef4444; }
+        .badge { padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+    </style>
+</head>
+<body class="p-5">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-2 text-blue-400">IDX News Radar AI</h1>
+        <p class="text-slate-400 mb-8">Analisis berita saham otomatis menggunakan Gemini AI</p>
+        
+        <div id="news-container">Memuat berita...</div>
+    </div>
+
+    <script>
+        async function loadNews() {
+            try {
+                const response = await fetch('analyzed_news.json');
+                const data = await response.json();
+                const container = document.getElementById('news-container');
+                container.innerHTML = '';
+
+                data.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = `card score-${item.score || 3}`;
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-blue-300 font-bold">${item.ticker || 'N/A'}</span>
+                            <span class="badge ${item.score >= 4 ? 'bg-green-900 text-green-300' : 'bg-red-900 text-red-300'}">
+                                Score: ${item.score}/5
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-semibold mb-2">${item.title}</h2>
+                        <p class="text-slate-400 text-sm mb-3">${item.summary || ''}</p>
+                        <div class="text-xs text-slate-500 flex justify-between">
+                            <span>${item.date}</span>
+                            <a href="${item.url}" target="_blank" class="text-blue-400 hover:underline">Baca Sumber →</a>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (e) {
+                document.getElementById('news-container').innerHTML = 'Gagal memuat berita. Pastikan analyzed_news.json sudah ada.';
+            }
+        }
+        loadNews();
+    </script>
+</body>
+</html>
