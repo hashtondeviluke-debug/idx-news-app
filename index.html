@@ -5,79 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDX News Radar AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
-        .card-glow:hover { box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.5); }
+        body { background-color: #020617; color: #f8fafc; font-family: sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body class="min-h-screen pb-20">
-    <nav class="glass sticky top-0 z-50 px-6 py-4 mb-10 border-b border-slate-800">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">IDX News Radar</h1>
-                <p class="text-xs text-slate-500 uppercase tracking-widest">AI Sentiment Analysis</p>
-            </div>
-            <div id="status-badge" class="text-[10px] px-2 py-1 rounded bg-slate-800 border border-slate-700 text-slate-400">CONNECTING...</div>
+<body class="p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-blue-400 mb-2">IDX News Radar AI</h1>
+        <p class="text-slate-400 mb-8">Menampilkan berita terbaru dari bursa saham.</p>
+        
+        <div id="news-grid" class="space-y-4">
+            <p class="text-center py-10">Memuat data...</p>
         </div>
-    </nav>
-
-    <main class="max-w-6xl mx-auto px-6">
-        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="col-span-full text-center py-20">
-                <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto mb-4"></div>
-                <p class="text-slate-500">Menyinkronkan data dengan Gemini AI...</p>
-            </div>
-        </div>
-    </main>
+    </div>
 
     <script>
         async function loadNews() {
             try {
-                // Tambahkan random parameter agar tidak kena cache browser
+                // Kita coba ambil analyzed_news.json dulu
                 const response = await fetch('analyzed_news.json?v=' + Math.random());
                 const data = await response.json();
                 const container = document.getElementById('news-grid');
-                const badge = document.getElementById('status-badge');
-                
-                if(!data || data.length === 0) {
-                    container.innerHTML = '<div class="col-span-full text-center text-slate-500 py-20 bg-slate-900/50 rounded-xl border border-dashed border-slate-800">Belum ada data berita. AI akan update otomatis besok pagi jam 08:30.</div>';
-                    badge.innerText = "NO DATA";
-                    return;
-                }
-
-                badge.innerText = "LIVE DATA: " + data.length + " ARTICLES";
-                badge.className = "text-[10px] px-2 py-1 rounded bg-blue-900/30 border border-blue-800 text-blue-400";
-                
                 container.innerHTML = '';
-                data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
                 data.forEach(item => {
-                    const score = item.score || 3;
                     const card = document.createElement('div');
-                    card.className = "glass p-6 rounded-2xl card-glow transition-all duration-300 flex flex-col justify-between h-full";
-                    
-                    const scoreColor = score >= 4 ? 'text-green-400 bg-green-400/10' : (score <= 2 ? 'text-red-400 bg-red-400/10' : 'text-yellow-400 bg-yellow-400/10');
-                    
+                    card.className = "glass p-5 rounded-xl border-l-4 " + (item.score >= 4 ? 'border-green-500' : 'border-blue-500');
                     card.innerHTML = `
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/20">$${item.ticker || 'IDX'}</span>
-                                <span class="text-xs font-bold px-2 py-1 rounded ${scoreColor}">SCORE: ${score}/5</span>
-                            </div>
-                            <h2 class="text-lg font-bold mb-3 leading-snug hover:text-blue-300 transition-colors cursor-pointer">${item.title}</h2>
-                            <p class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">${item.summary || 'Analisis Gemini: Berita ini memberikan dampak sentimen netral terhadap pergerakan harga saham emiten terkait.'}</p>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-blue-400 font-bold">${item.ticker || item.source || 'NEWS'}</span>
+                            <span class="text-xs text-slate-500">${item.date || item.scraped_at || ''}</span>
                         </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-slate-800 mt-auto text-[10px] text-slate-500">
-                            <span>${item.date}</span>
-                            <a href="${item.url}" target="_blank" class="hover:text-white flex items-center gap-1 uppercase font-bold tracking-tighter">Read News <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></a>
-                        </div>
+                        <h2 class="text-lg font-bold mb-2">${item.title}</h2>
+                        <p class="text-slate-400 text-sm mb-4">${item.summary || (item.body ? item.body.substring(0, 150) + '...' : '')}</p>
+                        <a href="${item.url}" target="_blank" class="text-xs text-blue-500 font-bold hover:underline">BACA SUMBER ASLI →</a>
                     `;
                     container.appendChild(card);
                 });
             } catch (e) {
-                document.getElementById('news-grid').innerHTML = '<div class="col-span-full text-center text-red-400 py-10">Gagal mengambil data analyzed_news.json.</div>';
+                document.getElementById('news-grid').innerHTML = '<p class="text-red-400">Gagal memuat data. Pastikan file analyzed_news.json sudah ada di GitHub.</p>';
             }
         }
         loadNews();
